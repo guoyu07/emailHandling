@@ -1,0 +1,63 @@
+
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+</head>
+<body>
+ <!--This is a form options that if you want to make a new for it start from here. RestFORM1.php is the address of welcometemplate form -->
+<div class="nav-location">
+    <ul>
+        <li class="locationhead"><a href="#">Select Temlate</a>
+            <ul id="location-options">
+                <li><a href="RestForm1.php">WelcomeTemplate</a></li>
+                <li><a href="">RegisterTemplate</a></li>
+                <li><a href="">RoomataTemplate</a></li>
+                <li><a href="">ConfirmationTemplate</a></li>
+               
+            </ul>
+        </li>
+    </ul>
+</div>
+<div id="location-info">nothing here yet</div>
+ 
+ 
+<!--On call function that is for showing the URL of forms-->
+ 
+ 
+</form>
+<script>
+$(document).ready(function(){  
+       
+    $("#location-info").html("loaded");   
+    
+    $('#location-options li').each(function() {
+        $(this).bind("click", function(e) {
+            e.preventDefault();
+           $el = e.target;
+            
+           var link = $el.href;
+           $('#location-info').html(link);
+          
+            $.ajax({
+                url: link,
+                type: "GET"
+            })
+            .done(function( html ) {
+                $("#location-info").append( html );
+            })            
+            .fail(function( jqXHR, textStatus ) {
+                $("#location-info").append("<BR>ajaxresult: " + textStatus );
+            });            
+            
+            return false;
+        });
+    });
+});
+
+</script>
+</head>
+
+
+</body>
+</html>
