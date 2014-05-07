@@ -17,20 +17,20 @@ A sample template containing the values Fname and Lname. Curly brackets outline
 value. Pulled by SelectTable.php.
 
 FormJQuery.html
----------------
+----
 Sample interface html page to access templates. Contains a listing of templates
 (currently only one is active). Href of link is name of template form file
 (RestForm.php used in example). Clicking on link calls AJAX GET to pull file
 output into page.
 
 RestForm1.php
--------------
+----
 Sample form using values required for email process.
 This form POSTS to InsertTable.php
 
 
 InsertTable.php
----------------
+----
 Example of email insertionInserts a row into "Template3" containing the values
 POSTed from RestForm. In this sample, the ID, Keys, Values, and Body are set.
 
@@ -54,7 +54,7 @@ Includes SelectTable.php at the end.
 
 
 CreateTable.php
----------------
+----
 Creates two tables in Postgresql.
 
 Template3 > ID (Primary key integer), Keys (text array), Values (text array),
@@ -73,7 +73,7 @@ work with array data.
 The next set of files send emails based on form data.
 
 SelectTable.php
----------------
+----
 Included by InsertTable.php
 
 Pulls data from the template3 table.
@@ -86,7 +86,7 @@ then included and the database connection closed.
 
 
 TemplatePreview.php
--------------------
+----
 A sample form to send an email.
 
 Included at the end of the SelectTable.php script.
@@ -101,7 +101,7 @@ SelectTable.php.
 
 
 InsertMessageTable.php
-----------------------
+----
 
 TemplatePreview.php posts to this file. The POST array values are inserted into
 two tables: sentemail3 and emailtemplatelog.
@@ -139,7 +139,7 @@ POST is not error checked.
 
 
 SedMessagefinal.php
--------------------
+----
 Included at the end of InsertMessageTable.php.
 
 Includes swift mailer library and then sends out emails. The user name and
