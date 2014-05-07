@@ -12,7 +12,7 @@ descriptions.
 The files below are used to create a record in the Template3 table.
 
 templatetext.html
------------------
+----
 A sample template containing the values Fname and Lname. Curly brackets outline
 value. Pulled by SelectTable.php.
 
@@ -69,8 +69,6 @@ Note: Using Postgresql's array column may be brought into question. It is not
 supported in MySQL (which we won't hold against it because MySQL does many
 things differently) but generally we use foreign keys with table joins to
 work with array data.
-
-------------------------------------------------------------------------------
 
 The next set of files send emails based on form data.
 
