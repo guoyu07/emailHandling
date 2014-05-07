@@ -3,9 +3,9 @@ emailHandling
 An example script which creates email templates and plugs in email receiver data.
 
 ```
-This script should not be deployed on a public server. It is being used ****
-as a learning process. Feedback on its efficacy are included with file  ****
-descriptions.                                                           ****
+This script should not be deployed on a public server. It is being used
+as a learning process. Feedback on its efficacy are included with file
+descriptions.
 ```
 
 
